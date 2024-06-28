@@ -7,7 +7,7 @@ import { AuthGuard } from './auth/guards/auth.guard';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: '', component: HomeComponent, canActivate: [AuthGuard], children: [
-    { path: 'line-chart', loadChildren: () => import('./charts/line-chart/line-chart.module').then(m => m.LineChartModule) },
+    { path: 'line-chart', loadChildren: () => import('../app/charts/line-chart/line-chart.module').then(m => m.LineChartModule) },
     { path: 'bar-chart', loadChildren: () => import('./charts/bar-chart/bar-chart.module').then(m => m.BarChartModule) },
     { path: 'pie-chart', loadChildren: () => import('./charts/pie-chart/pie-chart.module').then(m => m.PieChartModule) },
     { path: 'doughnut-chart', loadChildren: () => import('./charts/doughnut-chart/doughnut-chart.module').then(m => m.DoughnutChartModule) },

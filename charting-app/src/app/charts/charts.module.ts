@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChartsModule } from 'ng2-charts';
+import { NgChartsModule } from 'ng2-charts'; // Cambiar ChartsModule por NgChartsModule
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
@@ -20,7 +20,7 @@ import { ChartsRoutingModule } from './charts-routing.module';
   ],
   imports: [
     CommonModule,
-    ChartsModule,
+    NgChartsModule,
     ChartsRoutingModule
   ],
   exports: [
